@@ -20,7 +20,7 @@ public class Journal
         foreach (Entry file in _allEntries)
         {
             _journalWriter.Write(file.StoreEntries());
-            _journalWriter.Flush();
+            _journalWriter.Close();
         }
     }
     public void LoadJournal()
